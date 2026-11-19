@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Abby is a technology and operations leader with 25+ years in software engineering. Founder of Bitesize Ops. Helping small and mid-sized businesses run with less manual work.">
+<meta property="og:title" content="Abby, Technology and Operations Leader">
+<meta property="og:description" content="25+ years in software engineering. Founder of Bitesize Ops. Process automation, applied AI, and part-time technology leadership.">
+<meta property="og:url" content="https://abbygile.com">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://abbygile.com">
+<title>Abby, Technology and Operations Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: a business card up top, then four short sections in one narrow column. */
+:root{
+  --bg:#f4f5f2;
+  --surface:#ffffff;
+  --ink:#16201c;
+  --muted:#5b6762;
+  --line:#dde2dd;
+  --accent:#1d6b55;
+  --accent-soft:#e3efe9;
+  --font-display:"Sora",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1513;--surface:#161e1b;--ink:#e8eeea;--muted:#9aa8a1;--line:#26312c;--accent:#5fc3a0;--accent-soft:#1c2c26;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1513;--surface:#161e1b;--ink:#e8eeea;--muted:#9aa8a1;--line:#26312c;--accent:#5fc3a0;--accent-soft:#1c2c26;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px 64px;display:flex;flex-direction:column;gap:48px}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* Card */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.photo{width:120px;height:120px;border-radius:50%;background:var(--accent-soft);border:2px dashed var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--accent);font-family:var(--font-display)}
+.photo b{font-size:40px;line-height:1}
+.photo span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;font-family:var(--font-body)}
+.card h1{font-size:40px;line-height:1.1}
+.role{font-weight:600;color:var(--accent);margin-top:6px}
+.focus{color:var(--muted);margin-top:4px;font-size:15px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:15px}
+.contact a,.contact span{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line)}
+.contact .ph{color:var(--muted);font-style:italic}
+
+/* Sections */
+section{display:flex;flex-direction:column;gap:16px}
+h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.lede{font-size:21px;line-height:1.5;font-family:var(--font-display);font-weight:400;max-width:62ch}
+.body{max-width:65ch;color:var(--ink)}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.item h3{font-size:17px;margin-bottom:6px}
+.item p{color:var(--muted);font-size:15px}
+
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.timeline li:last-child{border-bottom:1px solid var(--line)}
+.yr{font-variant-numeric:tabular-nums;color:var(--muted);font-size:15px;padding-top:2px}
+.timeline strong{display:block}
+.timeline p{color:var(--muted);font-size:15px}
+
+.work{display:flex;flex-direction:column;gap:14px}
+.work .item{border-left:4px solid var(--accent)}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 10px;margin-bottom:8px}
+
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:0;padding:0;list-style:none}
+.principles li{padding-left:18px;position:relative}
+.principles li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+
+footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
+
+@media (max-width:620px){
+  .wrap{padding-top:24px;gap:40px}
+  .card{grid-template-columns:1fr;padding:24px;gap:18px}
+  .photo{width:96px;height:96px}
+  .card h1{font-size:34px}
+  .grid,.principles{grid-template-columns:1fr}
+  .timeline li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="card">
+    <div class="photo" aria-label="Photo placeholder"><b>A</b><span>Photo</span></div>
+    <div>
+      <h1>Abby</h1>
+      <p class="role">Technology &amp; Operations Leader · Founder, Bitesize Ops</p>
+      <p class="focus">Fractional technology leadership · Process automation · Applied AI · 25+ years in software engineering</p>
+      <div class="contact">
+        <span class="ph">email@placeholder.com</span>
+        <span class="ph">WhatsApp +000 000 000 000</span>
+        <a href="https://www.linkedin.com/in/abby-gile/">LinkedIn</a>
+        <span>Serving clients in the US, Europe, and Africa</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p class="lede">I help small and mid-sized businesses run with less manual work, using proven engineering, clear processes, and AI where it earns its place.</p>
+    <p class="body">Abby is a technology leader with more than 25 years of experience building and running software across financial services, public health programs, and global networking. Most recently she was Director of Software Engineering at one of the largest financial services firms in the United States. Over eleven years there she grew from technical lead to director, leading engineering teams and IT strategy for business-critical platforms. She now brings that same discipline to businesses that need it but are not ready for a full-time technology hire.</p>
+    <p class="body">Today she is the founder of Bitesize Ops, an operations and automation practice. She helps small and mid-sized businesses find the manual work that slows them down, then replaces it with connected tools, automated workflows, and AI agents where they clearly pay off. She also works as a part-time technology partner for owners and managers who need senior guidance without the cost of a full-time executive. Her own company, Abiko Agritech in Ethiopia, runs on systems she designed for offline, low-bandwidth conditions.</p>
+  </section>
+
+  <section>
+    <h2>How I can help</h2>
+    <div class="grid">
+      <div class="item">
+        <h3>Workflow automation and applied AI</h3>
+        <p>Automated workflows, and AI agents where they fit, that handle intake, follow-up, document processing, and reporting on the tools you already pay for.</p>
+      </div>
+      <div class="item">
+        <h3>Fractional technology leadership</h3>
+        <p>A senior technology partner on your side, part time: choosing the right tools, deciding what to build or buy, and keeping vendors and freelancers on track.</p>
+      </div>
+      <div class="item">
+        <h3>Operations and process design</h3>
+        <p>Clear SOPs, clean data, and reliable reporting, so the business runs on systems instead of on a few overloaded people.</p>
+      </div>
+      <div class="item">
+        <h3>Systems for hard environments</h3>
+        <p>Offline-first tools for agriculture, field teams, and public programs in emerging markets, built for older devices and patchy connectivity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What clients get</h2>
+    <div class="grid">
+      <div class="item"><h3>Hours back every week</h3><p>Repetitive copying, chasing, and report building handled automatically.</p></div>
+      <div class="item"><h3>Faster response</h3><p>Leads and requests answered quickly, including after hours.</p></div>
+      <div class="item"><h3>Fewer errors</h3><p>Data extracted, cleaned, and moved between systems without retyping.</p></div>
+      <div class="item"><h3>Smart use of what you have</h3><p>Clearly scoped work that gets more from your existing tools before adding new ones.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li><span class="yr">2026 to now</span><div><strong>Founder, Bitesize Ops</strong><p>Process redesign, workflow automation, data cleanup, reporting, and SOPs for small and mid-sized businesses. <a href="https://bitesizeops.com">bitesizeops.com</a></p></div></li>
+      <li><span class="yr">Ongoing</span><div><strong>Founder, Abiko Agritech</strong><p>Integrated organic farm in Hawassa, Ethiopia, and the operating systems behind it.</p></div></li>
+      <li><span class="yr">2015 to 2026</span><div><strong>Director of Software Engineering, Chapter Lead</strong><p>Major US financial services firm. Grew from technical lead to director, leading engineering teams, IT strategy, and large-scale platforms.</p></div></li>
+      <li><span class="yr">2014 to 2015</span><div><strong>Senior Software Engineer</strong><p>Public-sector consulting firm, building systems for health and human services programs.</p></div></li>
+      <li><span class="yr">2006 to 2013</span><div><strong>Senior Software Engineer</strong><p>Financial services, building and delivering business-critical software.</p></div></li>
+      <li><span class="yr">2000 to 2006</span><div><strong>Software Engineer</strong><p>A global networking company and an email marketing platform.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Selected work</h2>
+    <div class="work">
+      <div class="item">
+        <span class="tag">Operations automation</span>
+        <h3>Bitesize Ops</h3>
+        <p>Fixed-scope work that gives teams hours back each week: connecting tools so data is never copied by hand, extracting data from documents and email, automating recurring reports, and writing clear SOPs. In one engagement, a new service business went live in days using tools it already had, with no new subscriptions.</p>
+      </div>
+      <div class="item">
+        <span class="tag">Agriculture · Hawassa, Ethiopia</span>
+        <h3>Abiko Agritech</h3>
+        <p>An integrated organic farm covering dairy, poultry, goats, honey, and crops. It was started to show that a small plot of land can be financially viable and sustainable, and to serve as a learning site for the community.</p>
+      </div>
+      <div class="item">
+        <span class="tag">Operations system</span>
+        <h3>Farm operations monitoring</h3>
+        <p>Offline tablet forms for six farm departments. Staff file a daily report in about a minute, and the results feed a management dashboard that tracks output against targets, delays, and issues.</p>
+      </div>
+      <div class="item">
+        <span class="tag">Automation</span>
+        <h3>Recruitment bot</h3>
+        <p>A Telegram hiring bot running on cloud infrastructure. It takes applications and CV uploads and logs every applicant automatically, so the farm can recruit without manual paperwork.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I work</h2>
+    <ul class="principles">
+      <li>Start from the real problem, not the technology.</li>
+      <li>Design for real conditions: low bandwidth, older devices, busy people.</li>
+      <li>Keep it simple enough that people actually use it.</li>
+      <li>Leave behind a system and a team that can run it.</li>
+    </ul>
+  </section>
+
+  <footer>Computer Science, University of Massachusetts Boston</footer>
+
+</main>
+</body>
+</html>
